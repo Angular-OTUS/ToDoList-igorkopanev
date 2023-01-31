@@ -1,0 +1,24 @@
+<div class="add-todo__wrapper">
+  <p
+    *ngIf="warning"
+    class="add-todo__warn">{{warning}}</p>
+  <form class="add-todo">
+    <mat-form-field class="add-todo__input">
+      <mat-label>Add your new todo</mat-label>
+      <input
+        [(ngModel)]="task"
+        [ngModelOptions]="{ standalone: true }"
+        (click)="onFocus()"
+        matInput
+      />
+    </mat-form-field>
+    <button
+      type="button"
+      class="add-todo__button"
+      mat-flat-button
+      [style.opacity]="opacity"
+      [disabled]="disabledButton"
+      (click)="addTask()"
+    >Add task</button>
+  </form>
+</div>
