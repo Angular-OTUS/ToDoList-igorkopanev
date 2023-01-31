@@ -1,0 +1,11 @@
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasks-list__item {
+  background-color: #f0f0f0;
+  margin-bottom: .5rem;
+  width: 75%;
+}

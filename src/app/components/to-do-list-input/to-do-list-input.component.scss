@@ -1,0 +1,20 @@
+.add-todo {
+  &__input {
+    width: 75%;
+  }
+
+  //При &__button стили не применяются
+  .add-todo__button {
+    background-color: #009447;
+    color: white;
+  }
+  &__warn {
+    color: red;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
