@@ -12,24 +12,26 @@ import {MatButtonModule} from "@angular/material/button";
 import { ToDoListItemComponent } from './components/to-do-list-item/to-do-list-item.component';
 import {FormsModule} from "@angular/forms";
 import { ToDoListInputComponent } from './components/to-do-list-input/to-do-list-input.component';
+import {SharedModule} from "./modules/shared/shared.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDoListComponent,
     ToDoListItemComponent,
-    ToDoListInputComponent
+    ToDoListInputComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatInputModule,
-    MatListModule,
-    MatButtonModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatInputModule,
+        MatListModule,
+        MatButtonModule,
+        FormsModule,
+        SharedModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

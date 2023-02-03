@@ -12,13 +12,11 @@
         matInput
       />
     </mat-form-field>
-    <button
-      type="button"
-      class="add-todo__button"
-      mat-flat-button
+    <app-button
+      [color]="green"
       [style.opacity]="opacity"
       [disabled]="disabledButton"
       (click)="addTask()"
-    >Add task</button>
+    >Add task</app-button>
   </form>
 </div>

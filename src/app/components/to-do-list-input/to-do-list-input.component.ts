@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {ToDoListInterface} from "../../interfaces/to-do-list.interface";
 
 @Component({
   selector: 'app-to-do-list-input',
@@ -10,10 +9,12 @@ export class ToDoListInputComponent {
 
   @Output('addTask') taskAdded = new EventEmitter<string>();
 
-  task: string = '';
-  warning: string = '';
+  task = '';
+  warning = '';
   opacity = 0.6;
   disabledButton = false;
+
+  green = 'green';
 
   onFocus() {
     this.opacity = 1;
