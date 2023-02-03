@@ -3,10 +3,8 @@
     class="tasks-list__item"
     role="listitem">{{ todo.text }}
   </mat-list-item>
-  <button
-    type="button"
-    mat-flat-button
-    color="warn"
+  <app-button
+    [color]="red"
     (click)="deleteTask(todo.id)"
-  >Delete</button>
+  >Delete</app-button>
 </div>

@@ -1,5 +1,9 @@
 <div class="wrapper">
-  <mat-card>
+  <div class="spinner">
+    <app-spinner *ngIf="!isLoading"></app-spinner>
+  </div>
+
+  <mat-card *ngIf="isLoading">
     <mat-card-content>
       <h1 class="header">Todo List</h1>
       <mat-list role="list">

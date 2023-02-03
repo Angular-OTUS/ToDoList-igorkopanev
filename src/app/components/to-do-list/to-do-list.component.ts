@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ToDoListInterface} from "../../interfaces/to-do-list.interface";
 
 @Component({
@@ -6,22 +6,20 @@ import {ToDoListInterface} from "../../interfaces/to-do-list.interface";
   templateUrl: './to-do-list.component.html',
   styleUrls: ['./to-do-list.component.scss']
 })
-export class ToDoListComponent {
+export class ToDoListComponent implements OnInit {
+  isLoading = false;
 
-  task: string = '';
-  opacity = 0.6;
-  disabledButton = false;
+  ngOnInit(): void {
+    setTimeout(() => {
+      (this.isLoading = true)
+    }, 700)
+  }
 
   toDoList: ToDoListInterface[] = [
     { id: '1', text: 'one' },
     { id: '2', text: 'two' },
     { id: '3', text: 'three' },
   ];
-
-  onFocus() {
-    this.opacity = 1;
-    this.disabledButton = false;
-  }
 
   deleteTask(id: string) {
     this.toDoList = this.toDoList.filter((item) => item.id !== id);
@@ -30,7 +28,7 @@ export class ToDoListComponent {
   addTask(task: string) {
       const newId = Math.max(...this.toDoList.map((x) => parseInt(x.id))) + 1;
 
-      let newTask: ToDoListInterface = {
+      const newTask: ToDoListInterface = {
         id: newId.toString(),
         text: task,
       };

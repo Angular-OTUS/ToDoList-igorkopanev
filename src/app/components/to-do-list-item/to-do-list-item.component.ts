@@ -11,6 +11,8 @@ export class ToDoListItemComponent {
   @Input() todo!: ToDoListInterface;
   @Output('deleteTask') taskDeleted = new EventEmitter<string>();
 
+  red = 'red';
+
   deleteTask(id: string) {
     this.taskDeleted.emit(id);
   }
