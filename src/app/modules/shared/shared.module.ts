@@ -17,4 +17,4 @@ import { SpinnerComponent, ButtonComponent } from './components';
     MatButtonModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {}
