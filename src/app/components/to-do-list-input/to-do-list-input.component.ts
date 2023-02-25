@@ -11,21 +11,17 @@ export class ToDoListInputComponent {
 
   task = '';
   warning = '';
-  opacity = 0.6;
   disabledButton = false;
-
   green = 'green';
 
-  onFocus() {
-    this.opacity = 1;
-    this.disabledButton = false;
+  onFocus(): void {
+    this.disabledButton = true;
   }
 
-  addTask() {
+  addTask(): void {
     if (this.task === '') {
       this.warning = 'This field should not be empty!'
       this.disabledButton = !this.disabledButton;
-      this.opacity = 0.6;
     }
     else {
       this.taskAdded.emit(this.task);

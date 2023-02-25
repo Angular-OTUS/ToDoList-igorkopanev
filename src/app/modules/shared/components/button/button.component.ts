@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -6,22 +6,9 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
 
   @Input() color: string = 'red | green';
   @Input() disabled = true;
-  ngOnInit(): void {
-      this.calcBackgroundColorStyle();
-  }
-  bgColor: string = '';
-  fontColor: string = 'white';
 
-  calcBackgroundColorStyle() {
-    if (this.color === 'red') {
-      this.bgColor = '#f44c3e';
-    }
-    else {
-      this.bgColor = 'green';
-    }
-  }
 }

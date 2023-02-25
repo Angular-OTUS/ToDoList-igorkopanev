@@ -11,8 +11,8 @@ export class ToDoListComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      (this.isLoading = true)
-    }, 700)
+      (this.isLoading = true);
+    }, 700);
   }
 
   toDoList: ToDoListInterface[] = [

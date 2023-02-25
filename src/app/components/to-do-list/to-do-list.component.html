@@ -7,19 +7,13 @@
     <mat-card-content>
       <h1 class="header">Todo List</h1>
       <mat-list role="list">
-        <div *ngFor="let todo of toDoList" >
-         <app-to-do-list-item
-           [todo]="todo"
-           (deleteTask) = deleteTask($event)
-         >
+        <div *ngFor="let todo of toDoList">
+         <app-to-do-list-item [todo]="todo" (deleteTask) = deleteTask($event)>
          </app-to-do-list-item>
         </div>
       </mat-list>
-      <app-to-do-list-input
-        (addTask)="addTask($event)"
+      <app-to-do-list-input (addTask)="addTask($event)"
       ></app-to-do-list-input>
     </mat-card-content>
   </mat-card>
-    </div>
-
-
+</div>

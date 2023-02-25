@@ -13,9 +13,9 @@
       />
     </mat-form-field>
     <app-button
+      class="add-todo__button"
+      [class.add-todo__button--active]="disabledButton"
       [color]="green"
-      [style.opacity]="opacity"
-      [disabled]="disabledButton"
       (click)="addTask()"
     >Add task</app-button>
   </form>
